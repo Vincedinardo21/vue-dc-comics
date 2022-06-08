@@ -4,6 +4,13 @@
         <a href="#">
           <img src="../assets/img/dc-logo.png" alt="dc logo">
         </a>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+          </ul>
+        </nav>
     </header>
 </template>
 
@@ -17,8 +24,24 @@ export default {
 <style scoped lang="scss">
 header {
   border: 1px solid black;
+
+  ul {
+    list-style-type: none;
+
+    li {
+      display: inline-block;
+
+      a {
+      text-decoration: none;
+      color: black;
+      padding: 10px;
+      border: 1px solid red;
+      
+        &:hover {
+          color: blue;
+        }
+      }
+    }   
+  }
 }
-// h1 {
-//   margin: 40px 0 0;
-// }
 </style>
