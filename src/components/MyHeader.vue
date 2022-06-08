@@ -6,9 +6,11 @@
         </a>
         <nav>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Home</a></li>
+            <li v-for="(item, i) in navElements" :key="i" :class="item.current ? 'here' : '' ">
+              <a href="item.url">{{item.text}}</a>
+            </li>
+            <!-- <li class="here"><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li> -->
           </ul>
         </nav>
     </header>
@@ -17,6 +19,62 @@
 <script>
 export default {
   name: 'MyHeader',
+  data(){
+    return {
+      navElements : [
+        {
+          text : "CHARACTERS",
+          url : "#",
+          current : false
+        },
+        {
+          text : "COMICS",
+          url : "#",
+          current : true
+        },
+        {
+          text : "MOVIES",
+          url : "#",
+          current : false
+        },
+        {
+          text : "TV",
+          url : "#",
+          current : false
+        },
+        {
+          text : "GAMES",
+          url : "#",
+          current : false
+        },
+        {
+          text : "COLLECTIBLES",
+          url : "#",
+          current : false
+        },
+        {
+          text : "VIDEOS",
+          url : "#",
+          current : false
+        },
+        {
+          text : "FANS",
+          url : "#",
+          current : false
+        },
+        {
+          text : "NEWS",
+          url : "#",
+          current : false
+        },
+        {
+          text : "SHOP",
+          url : "#",
+          current : false
+        }
+      ]
+    }
+  }
 }
 </script>
 
@@ -30,12 +88,18 @@ header {
 
     li {
       display: inline-block;
+      padding: 10px;
+      border: 1px solid red;
+
+      &.here {
+        //background-color: aqua;
+        border-bottom: 6px solid blue;
+      }
 
       a {
       text-decoration: none;
       color: black;
-      padding: 10px;
-      border: 1px solid red;
+      
       
         &:hover {
           color: blue;
