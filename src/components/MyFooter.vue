@@ -14,6 +14,51 @@
             </li>
           </ul>
         </section>
+
+        <!-- Footer Middle -->
+        <section class="footer-middle">
+          <!-- Left List -->
+          <ul>
+            <li><h2>DC COMICS</h2></li>
+            <li>Characters</li>
+            <li>Comics</li>
+            <li>Movies</li>
+            <li>TV</li>
+            <li>Games</li>
+            <li>Videos</li>
+            <li>News</li>
+
+            <li><h2>SHOP</h2></li>
+            <li>Shop DC</li>
+            <li>Shop DC Collectibles</li>
+          </ul>
+
+          <!-- Center List -->
+          <ul>
+            <li><h2>DC</h2></li>
+            <li>Terms Of Us</li>
+            <li>Privacy policy (New)</li>
+            <li>Add Choices</li>
+            <li>Advertising</li>
+            <li>Jobs</li>
+            <li>Subscriptions</li>
+            <li>Talent Workshops</li>
+            <li>CPSC Certificates</li>
+            <li>Ratings</li>
+            <li>Shop Help</li>
+            <li>Contact Us</li>
+          </ul>
+
+          <!-- Right List -->
+          <ul>
+            <li><h2>SITES</h2></li>
+            <li>DC</li>
+            <li>MAD Magazine</li>
+            <li>DC Kids</li>
+            <li>DC Universe</li>
+            <li>DC Power Visa</li>
+          </ul>
+        </section>
     </footer>
 </template>
 
@@ -60,12 +105,26 @@ footer {
   background-color: aqua;
 
   ul{
-    display: flex;
-    justify-content: space-around;
-    align-items:center;
-
-    div {
+    &.product{
       display: flex;
+      justify-content: space-around;
+      align-items:center;
+
+      div {
+        display: flex;
+        align-items: center;
+      }
+    }
+    
+  }
+  
+  section{
+    &.footer-middle {
+      display: flex;
+      // Debug
+      background-color: aquamarine;
+      border: 1px solid black;
+      min-height: 100px;
     }
   }
 }
