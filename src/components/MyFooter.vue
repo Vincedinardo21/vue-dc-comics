@@ -59,6 +59,21 @@
             <li>DC Power Visa</li>
           </ul>
         </section>
+
+        <!-- Footer Bottom -->
+        <section class="footer-bottom">
+          <div>
+            <a href="#">SIGN UP NOW!</a>            
+          </div>
+          <ul>
+              <li><h2>FOLLOW US</h2></li>
+              <li><img src="../assets/img/footer-facebook.png" alt="facebook icon"></li>
+              <li><img src="../assets/img/footer-twitter.png" alt="twitter icon"></li>
+              <li><img src="../assets/img/footer-youtube.png" alt="youtube icon"></li>
+              <li><img src="../assets/img/footer-pinterest.png" alt="pinterest icon"></li>
+              <li><img src="../assets/img/footer-periscope.png" alt="periscope icon"></li>
+            </ul>
+        </section>
     </footer>
 </template>
 
@@ -125,6 +140,22 @@ footer {
       background-color: aquamarine;
       border: 1px solid black;
       min-height: 100px;
+    }
+  }
+
+  section{
+    &.footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: red;
+      min-height: 100px;
+
+      ul{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
     }
   }
 }
