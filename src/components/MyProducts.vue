@@ -103,7 +103,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
     .card-section {
-        background-color: violet;
+        background-color: black;
         padding: 20px;
 
         .card-container {

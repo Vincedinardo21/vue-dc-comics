@@ -66,7 +66,7 @@
         <!-- Footer Bottom -->
         <section class="footer-bottom">
           <div class="bottom-container">
-            <div>
+            <div class="sign-up">
               <a href="#">SIGN UP NOW!</a>            
             </div>
             <ul>
@@ -127,7 +127,7 @@ footer {
     color: white;
     text-decoration: none;
   }
-  
+
   ul{
     margin-right: 40px;
     &.product{
@@ -152,21 +152,26 @@ footer {
  
 
   .footer-up {
-    background-color: bisque;
+    background-color: rgb(2, 130, 249);
   }
 
   section{
     &.footer-middle {
-      //padding: 30px;
-      
-      // Debug
-      background-color: aquamarine;
-      border: 1px solid black;
+      h2 {
+        color: white;
+      }
+      background-image: url("../assets/img/footer-bg.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      //border: 1px solid black;
       min-height: 100px;
 
        .list-container{
          display: flex;
          
+         li {
+           color: gray;
+         }
        }
     }
   }
@@ -174,13 +179,18 @@ footer {
   section{
     &.footer-bottom {
       
-      background-color: red;
+      background-color: rgb(48, 48, 48);
       min-height: 100px;
 
       .bottom-container {
         display: flex;
         justify-content: space-between;
         align-items: center;
+      }
+
+      .sign-up {
+        padding: 20px;
+        border: 1px solid rgb(2, 130, 249);
       }
 
       ul{
@@ -192,7 +202,7 @@ footer {
           margin-right: 10px;
 
           .follow{
-            color: blue;
+            color: rgb(2, 130, 249);
           }
         }
       }

@@ -81,7 +81,7 @@ export default {
 header {
   width: 70%;
   margin: 0 auto;
-  border: 1px solid black;
+  //border: 1px solid black;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -95,7 +95,7 @@ header {
       li {
         display: inline-block;
         padding: 10px;
-        border: 1px solid red;
+        //border: 1px solid red;
         height: 100%;
 
           &.here {
