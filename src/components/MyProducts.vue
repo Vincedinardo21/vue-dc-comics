@@ -1,8 +1,17 @@
 <template>
-    <section>
-        <div class="card" v-for="(item, i) in cards" :key="i">
-            <img :src="item.thumb" :alt="item.series">
-            <div>{{item.series}}</div>
+    <section class="card-section">
+        <div class="current-btn">
+            <h2>Current Series</h2>
+        </div>
+        <div class="card-container">
+            <div class="card" v-for="(item, i) in cards" :key="i">
+                <img :src="item.thumb" :alt="item.series">
+                <div>{{item.series}}</div>
+            </div>
+        </div> 
+        
+        <div class="load-btn">
+            <h3><a href="#">LOAD MORE</a></h3>
         </div>
     </section>   
 </template>
@@ -93,13 +102,27 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-    section {
+    .card-section {
         background-color: violet;
-        display: flex;
-        flex-wrap: wrap;
+        padding: 20px;
 
-        .card{
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+
+            .card{
             flex-basis: calc(100% / 6);
+            }
+        } 
+        
+        .load-btn {
+            width: 180px;
+            background-color: aqua;
+
+            h3 {
+                text-align: center;
+                padding: 10px;
+            }
         }
     }
 </style>

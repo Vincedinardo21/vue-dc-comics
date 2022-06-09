@@ -3,7 +3,10 @@
     <MyHeader/>
 
     <main>
-      <h2>Contenuto Main</h2>
+      <!-- <h2>Contenuto Main</h2> -->
+      <div class="jumbotron">
+
+      </div>
       <MyProducts/>
     </main>
 
@@ -32,8 +35,13 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  // text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+
+  .jumbotron {
+    height: 450px;
+    background-image: url("assets/img/jumbotron.jpg");
+    //background-position: center;
+  }
 }
 </style>
