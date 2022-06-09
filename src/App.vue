@@ -4,6 +4,7 @@
 
     <main>
       <h2>Contenuto Main</h2>
+      <MyProducts/>
     </main>
 
     <MyFooter/>
@@ -13,12 +14,15 @@
 <script>
 import MyHeader from './components/MyHeader.vue'
 import MyFooter from './components/MyFooter.vue'
+import MyProducts from './components/MyProducts.vue'
+
 
 export default {
   name: 'App',
   components: {
     MyHeader,
-    MyFooter
+    MyFooter,
+    MyProducts
   }
 }
 </script>
