@@ -95,12 +95,13 @@ header {
       li {
         display: inline-block;
         padding: 10px;
+        
         //border: 1px solid red;
         height: 100%;
 
           &.here {
             //background-color: aqua;
-            border-bottom: 6px solid blue;
+            border-bottom: 6px solid rgb(2, 130, 249);
           }
 
             a {

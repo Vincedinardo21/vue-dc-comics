@@ -1,7 +1,7 @@
 <template>
     <section class="card-section">
         <div class="current-btn">
-            <h2>Current Series</h2>
+            <h2>CURRENT SERIES</h2>
         </div>
         <div class="card-container">
             <div class="card" v-for="(item, i) in cards" :key="i">
@@ -9,10 +9,13 @@
                 <div class="white">{{item.series}}</div>
             </div>
         </div> 
-        
-        <div class="load-btn">
-            <h3><a href="#">LOAD MORE</a></h3>
+
+        <div class="btn-container">
+            <div class="load-btn">
+                <h3><a href="#">LOAD MORE</a></h3>
+            </div>
         </div>
+        
     </section>   
 </template>
 
@@ -106,6 +109,18 @@ export default {
         background-color: black;
         padding: 20px;
 
+        .current-btn {
+            width: 70%;
+            margin: 0 auto;
+             
+            h2{
+                color: white;
+                width: 260px;
+                background-color: rgb(2, 130, 249);
+                text-align: center;
+                padding: 10px;
+            }
+        }
         .card-container {
             width: 70%;
             margin: 0 auto;
@@ -114,20 +129,31 @@ export default {
 
             .card{
             flex-basis: calc(100% / 6);
-
+            
             .white{
                 color: white;
             }
             }
         } 
         
+        .btn-container{
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
         .load-btn {
             width: 180px;
-            background-color: aqua;
+            background-color: rgb(2, 130, 249);
 
             h3 {
                 text-align: center;
                 padding: 10px;
+
+                a {
+                    color: white;
+                    text-decoration: none;
+                }
             }
         }
     }

@@ -59,7 +59,12 @@
               <li>DC Universe</li>
               <li>DC Power Visa</li>
             </ul>
+
+            <div>
+              <img src="../assets/img/dc-logo-bg.png" alt="">
+            </div>
           </div>
+          
           
         </section>
 
@@ -165,6 +170,10 @@ footer {
       background-size: cover;
       //border: 1px solid black;
       min-height: 100px;
+
+      img {
+        width: 300px;
+      }
 
        .list-container{
          display: flex;
