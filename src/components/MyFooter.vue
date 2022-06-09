@@ -1,7 +1,7 @@
 <template>
     <footer>
         <!-- Footer Up -->
-        <section>
+        <section class="footer-up">
           <ul class="product">
             <li v-for="(item, i) in footerElements" :key="i">
               <a href="item.url">
@@ -17,62 +17,67 @@
 
         <!-- Footer Middle -->
         <section class="footer-middle">
-          <!-- Left List -->
-          <ul>
-            <li><h2>DC COMICS</h2></li>
-            <li>Characters</li>
-            <li>Comics</li>
-            <li>Movies</li>
-            <li>TV</li>
-            <li>Games</li>
-            <li>Videos</li>
-            <li>News</li>
+          <div class="list-container">
+            <!-- Left List -->
+            <ul>
+              <li><h2>DC COMICS</h2></li>
+              <li>Characters</li>
+              <li>Comics</li>
+              <li>Movies</li>
+              <li>TV</li>
+              <li>Games</li>
+              <li>Videos</li>
+              <li>News</li>
 
-            <li><h2>SHOP</h2></li>
-            <li>Shop DC</li>
-            <li>Shop DC Collectibles</li>
-          </ul>
+              <li><h2>SHOP</h2></li>
+              <li>Shop DC</li>
+              <li>Shop DC Collectibles</li>
+            </ul>
 
-          <!-- Center List -->
-          <ul>
-            <li><h2>DC</h2></li>
-            <li>Terms Of Us</li>
-            <li>Privacy policy (New)</li>
-            <li>Add Choices</li>
-            <li>Advertising</li>
-            <li>Jobs</li>
-            <li>Subscriptions</li>
-            <li>Talent Workshops</li>
-            <li>CPSC Certificates</li>
-            <li>Ratings</li>
-            <li>Shop Help</li>
-            <li>Contact Us</li>
-          </ul>
+            <!-- Center List -->
+            <ul>
+              <li><h2>DC</h2></li>
+              <li>Terms Of Us</li>
+              <li>Privacy policy (New)</li>
+              <li>Add Choices</li>
+              <li>Advertising</li>
+              <li>Jobs</li>
+              <li>Subscriptions</li>
+              <li>Talent Workshops</li>
+              <li>CPSC Certificates</li>
+              <li>Ratings</li>
+              <li>Shop Help</li>
+              <li>Contact Us</li>
+            </ul>
 
-          <!-- Right List -->
-          <ul>
-            <li><h2>SITES</h2></li>
-            <li>DC</li>
-            <li>MAD Magazine</li>
-            <li>DC Kids</li>
-            <li>DC Universe</li>
-            <li>DC Power Visa</li>
-          </ul>
+            <!-- Right List -->
+            <ul>
+              <li><h2>SITES</h2></li>
+              <li>DC</li>
+              <li>MAD Magazine</li>
+              <li>DC Kids</li>
+              <li>DC Universe</li>
+              <li>DC Power Visa</li>
+            </ul>
+          </div>
+          
         </section>
 
         <!-- Footer Bottom -->
         <section class="footer-bottom">
-          <div>
-            <a href="#">SIGN UP NOW!</a>            
-          </div>
-          <ul>
-              <li><h2>FOLLOW US</h2></li>
+          <div class="bottom-container">
+            <div>
+              <a href="#">SIGN UP NOW!</a>            
+            </div>
+            <ul>
+              <li><h2 class="follow">FOLLOW US</h2></li>
               <li><img src="../assets/img/footer-facebook.png" alt="facebook icon"></li>
               <li><img src="../assets/img/footer-twitter.png" alt="twitter icon"></li>
               <li><img src="../assets/img/footer-youtube.png" alt="youtube icon"></li>
               <li><img src="../assets/img/footer-pinterest.png" alt="pinterest icon"></li>
               <li><img src="../assets/img/footer-periscope.png" alt="periscope icon"></li>
             </ul>
+          </div>        
         </section>
     </footer>
 </template>
@@ -117,9 +122,14 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 footer {
-  background-color: aqua;
-
+  //background-color: aqua;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  
   ul{
+    margin-right: 40px;
     &.product{
       display: flex;
       justify-content: space-around;
@@ -133,28 +143,58 @@ footer {
     
   }
   
+  .product, .list-container, .bottom-container{
+    width: 70%;
+    margin: 0 auto;
+    padding: 30px 0;
+  }
+
+ 
+
+  .footer-up {
+    background-color: bisque;
+  }
+
   section{
     &.footer-middle {
-      display: flex;
+      //padding: 30px;
+      
       // Debug
       background-color: aquamarine;
       border: 1px solid black;
       min-height: 100px;
+
+       .list-container{
+         display: flex;
+         
+       }
     }
   }
 
   section{
     &.footer-bottom {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      
       background-color: red;
       min-height: 100px;
+
+      .bottom-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
 
       ul{
         display: flex;
         justify-content: space-around;
         align-items: center;
+
+        li{
+          margin-right: 10px;
+
+          .follow{
+            color: blue;
+          }
+        }
       }
     }
   }

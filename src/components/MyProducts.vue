@@ -6,7 +6,7 @@
         <div class="card-container">
             <div class="card" v-for="(item, i) in cards" :key="i">
                 <img :src="item.thumb" :alt="item.series">
-                <div>{{item.series}}</div>
+                <div class="white">{{item.series}}</div>
             </div>
         </div> 
         
@@ -107,11 +107,17 @@ export default {
         padding: 20px;
 
         .card-container {
+            width: 70%;
+            margin: 0 auto;
             display: flex;
             flex-wrap: wrap;
 
             .card{
             flex-basis: calc(100% / 6);
+
+            .white{
+                color: white;
+            }
             }
         } 
         

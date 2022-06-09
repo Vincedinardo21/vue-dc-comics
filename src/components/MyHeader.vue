@@ -9,8 +9,6 @@
             <li v-for="(item, i) in navElements" :key="i" :class="item.current ? 'here' : '' ">
               <a href="item.url">{{item.text}}</a>
             </li>
-            <!-- <li class="here"><a href="#">Home</a></li>
-            <li><a href="#">Home</a></li> -->
           </ul>
         </nav>
     </header>
@@ -81,31 +79,42 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 header {
+  width: 70%;
+  margin: 0 auto;
   border: 1px solid black;
-
-  ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  nav {
+    ul {
     list-style-type: none;
+    height: 150px;
+    
 
-    li {
-      display: inline-block;
-      padding: 10px;
-      border: 1px solid red;
+      li {
+        display: inline-block;
+        padding: 10px;
+        border: 1px solid red;
+        height: 100%;
 
-      &.here {
-        //background-color: aqua;
-        border-bottom: 6px solid blue;
-      }
+          &.here {
+            //background-color: aqua;
+            border-bottom: 6px solid blue;
+          }
 
-      a {
-      text-decoration: none;
-      color: black;
+            a {
+            text-decoration: none;
+            color: black;
       
       
-        &:hover {
-          color: blue;
-        }
-      }
-    }   
+              &:hover {
+                color: blue;
+              }
+            }
+      }   
+    }
   }
+  
 }
 </style>
